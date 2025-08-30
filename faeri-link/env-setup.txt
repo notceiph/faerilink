@@ -1,0 +1,27 @@
+SUPABASE ENVIRONMENT SETUP
+=========================
+
+To fix the "Your project's URL and Key are required to create a Supabase client!" error:
+
+1. Create a .env.local file in the project root
+2. Add your Supabase credentials from: https://supabase.com/dashboard/project/_/settings/api
+
+.env.local contents:
+-------------------
+# Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-project-url-here
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key-here
+
+# Optional: Service role key (for server-side operations)
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
+
+How to get your Supabase credentials:
+-----------------------------------
+1. Go to https://supabase.com/dashboard
+2. Select your project
+3. Go to Settings > API
+4. Copy the Project URL and anon/public key
+5. Replace the placeholder values in .env.local
+
+After creating .env.local, restart your development server:
+npm run dev
